@@ -1,5 +1,6 @@
 from core.wallet import Wallet
 from core.transaction import Transaction
+import json
 
 
 wallet = Wallet()
@@ -16,8 +17,17 @@ tx = Transaction(
 tx.sign_transaction(wallet)
 
 
-print(tx.to_dict())
+print("=== TRANSACTION DATA ===")
+
+print(json.dumps(
+    tx.to_dict(),
+    indent=4
+))
 
 
-print("\nSignature Status:")
-print(tx.verify_signature())
+print("\n=== SIGNATURE VERIFICATION ===")
+
+if tx.verify_signature():
+    print("VALID")
+else:
+    print("INVALID")
