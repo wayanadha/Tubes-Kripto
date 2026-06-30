@@ -1,3 +1,5 @@
+import hashlib
+
 from cryptography.hazmat.primitives.asymmetric import ec
 from cryptography.hazmat.primitives import serialization
 
@@ -7,6 +9,7 @@ class Wallet:
     def __init__(self):
         self.private_key = self.generate_private_key()
         self.public_key = self.generate_public_key()
+        self.address = self.generate_address()
 
 
     def generate_private_key(self):
@@ -24,7 +27,6 @@ class Wallet:
 
 
     def get_private_key_pem(self):
-
         return self.private_key.private_bytes(
             encoding=serialization.Encoding.PEM,
             format=serialization.PrivateFormat.PKCS8,
@@ -33,8 +35,28 @@ class Wallet:
 
 
     def get_public_key_pem(self):
-
         return self.public_key.public_bytes(
             encoding=serialization.Encoding.PEM,
             format=serialization.PublicFormat.SubjectPublicKeyInfo
         ).decode()
+
+
+    def generate_address(self):
+
+        public_key = self.get_public_key_pem()
+
+        hashed = hashlib.sha256(
+            public_key.encode()
+        ).hexdigest()
+
+        address = "ADDR_" + hashed[:40]
+
+        return address
+
+
+    def get_wallet_info(self):
+
+        return {
+            "address": self.address,
+            "public_key": self.get_public_key_pem()
+        }
