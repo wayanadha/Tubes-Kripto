@@ -4,7 +4,6 @@ import json
 
 blockchain = Blockchain()
 
-
 blockchain.add_block(
     [
         {
@@ -14,7 +13,6 @@ blockchain.add_block(
         }
     ]
 )
-
 
 blockchain.add_block(
     [
@@ -26,26 +24,14 @@ blockchain.add_block(
     ]
 )
 
+print("\n=== BLOCKCHAIN ===\n")
 
-print("=== BLOCKCHAIN ===")
+print(
+    json.dumps(
+        blockchain.to_dict(),
+        indent=4
+    )
+)
 
-print(json.dumps(
-    blockchain.to_dict(),
-    indent=4
-))
-
-
-print("\n=== VALIDATION ===")
-print(blockchain.is_chain_valid())
-
-print("\n=== TAMPERING BLOCK ===")
-
-blockchain.chain[1].transactions[0]["amount"] = 999
-
-print(json.dumps(
-    blockchain.to_dict(),
-    indent=4
-))
-
-print("\n=== VALIDATION AFTER TAMPER ===")
+print("\n=== VALID ===")
 print(blockchain.is_chain_valid())

@@ -42,6 +42,18 @@ class Block:
             block_string.encode()
         ).hexdigest()
 
+    def mine_block(self, difficulty):
+
+        target = "0" * difficulty
+
+        while self.hash[:difficulty] != target:
+
+            self.nonce += 1
+            self.hash = self.calculate_hash()
+
+        print(f"Block {self.index} berhasil ditambang!")
+        print(f"Nonce : {self.nonce}")
+        print(f"Hash  : {self.hash}")
 
     def to_dict(self):
 

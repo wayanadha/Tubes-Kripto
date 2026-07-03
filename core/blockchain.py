@@ -32,6 +32,8 @@ class Blockchain:
             previous_hash=latest_block.hash
         )
 
+        new_block.mine_block(3)
+
         self.chain.append(new_block)
 
 
