@@ -22,12 +22,10 @@ class Wallet:
 
         return private_key
 
-
     def generate_public_key(self):
         public_key = self.private_key.public_key()
 
         return public_key
-
 
     def get_private_key_pem(self):
         return self.private_key.private_bytes(
@@ -36,13 +34,11 @@ class Wallet:
             encryption_algorithm=serialization.NoEncryption()
         ).decode()
 
-
     def get_public_key_pem(self):
         return self.public_key.public_bytes(
             encoding=serialization.Encoding.PEM,
             format=serialization.PublicFormat.SubjectPublicKeyInfo
         ).decode()
-
 
     def generate_address(self):
 
@@ -56,7 +52,6 @@ class Wallet:
 
         return address
 
-
     def get_wallet_info(self):
 
         return {
@@ -69,10 +64,8 @@ class Wallet:
     def get_balance(self):
         return self.balance
 
-
     def increase_balance(self, amount):
         self.balance += amount
-
 
     def decrease_balance(self, amount):
 
@@ -81,6 +74,19 @@ class Wallet:
 
         self.balance -= amount
 
-
     def increase_nonce(self):
         self.nonce += 1
+    
+    def transfer(self, receiver, amount):
+
+        if amount <= 0:
+            raise ValueError("Jumlah transfer harus lebih dari 0.")
+
+        if amount > self.balance:
+            raise ValueError("Saldo tidak mencukupi.")
+
+        self.decrease_balance(amount)
+
+        receiver.increase_balance(amount)
+
+        self.increase_nonce()
