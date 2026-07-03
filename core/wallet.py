@@ -11,6 +11,9 @@ class Wallet:
         self.public_key = self.generate_public_key()
         self.address = self.generate_address()
 
+        # Wallet Information
+        self.balance = 1000
+        self.nonce = 0
 
     def generate_private_key(self):
         private_key = ec.generate_private_key(
@@ -58,5 +61,26 @@ class Wallet:
 
         return {
             "address": self.address,
+            "balance": self.balance,
+            "nonce": self.nonce,
             "public_key": self.get_public_key_pem()
         }
+
+    def get_balance(self):
+        return self.balance
+
+
+    def increase_balance(self, amount):
+        self.balance += amount
+
+
+    def decrease_balance(self, amount):
+
+        if amount > self.balance:
+            raise ValueError("Saldo tidak mencukupi.")
+
+        self.balance -= amount
+
+
+    def increase_nonce(self):
+        self.nonce += 1

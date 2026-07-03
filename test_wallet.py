@@ -4,17 +4,23 @@ import json
 
 wallet = Wallet()
 
-
-wallet_info = wallet.get_wallet_info()
-
-
-print("=== WALLET INFORMATION ===")
-
+print("=== WALLET INFO ===")
 print(json.dumps(
-    wallet_info,
+    wallet.get_wallet_info(),
     indent=4
 ))
 
+print("\n=== TEST BALANCE ===")
+print("Balance Awal :", wallet.get_balance())
 
-print("\n=== PRIVATE KEY ===")
-print(wallet.get_private_key_pem())
+wallet.decrease_balance(200)
+
+print("Setelah Kurang 200 :", wallet.get_balance())
+
+wallet.increase_balance(500)
+
+print("Setelah Tambah 500 :", wallet.get_balance())
+
+wallet.increase_nonce()
+
+print("Nonce :", wallet.nonce)
