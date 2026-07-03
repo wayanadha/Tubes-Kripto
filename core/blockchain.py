@@ -35,6 +35,25 @@ class Blockchain:
         self.chain.append(new_block)
 
 
+    def is_chain_valid(self):
+
+        for i in range(1, len(self.chain)):
+
+            current_block = self.chain[i]
+            previous_block = self.chain[i - 1]
+
+            # cek apakah previous hash masih sesuai
+            if current_block.previous_hash != previous_block.hash:
+                return False
+
+            # cek apakah hash block masih sama
+            if current_block.hash != current_block.calculate_hash():
+                return False
+
+        return True
+
+
+
     def to_dict(self):
 
         return [
