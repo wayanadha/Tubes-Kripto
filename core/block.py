@@ -65,3 +65,18 @@ class Block:
             "nonce": self.nonce,
             "hash": self.hash
         }
+
+    @classmethod
+    def from_dict(cls, data):
+
+        block = cls(
+            index=data["index"],
+            transactions=data["transactions"],
+            previous_hash=data["previous_hash"]
+        )
+
+        block.timestamp = data["timestamp"]
+        block.nonce = data["nonce"]
+        block.hash = data["hash"]
+
+        return block

@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Adha",
+        "address": "ADDR_5df0f3b4812a6048bc2e610b0ff295f0b2a25480",
+        "balance": 1000,
+        "nonce": 0,
+        "private_key": "-----BEGIN PRIVATE KEY-----\nMIGEAgEAMBAGByqGSM49AgEGBSuBBAAKBG0wawIBAQQgAI4Q158xqnFcuYiGXynY\ng/d/6gpKoOk5OZRQNaLqfkGhRANCAATU/KaHn0EYGsIbI2yEA1wms/ougYqK3t/5\nzWgsjSviprsUrZq5owzxOSPoEVq5qntMaMjUI/zP3AA1wBWdjWsO\n-----END PRIVATE KEY-----\n",
+        "public_key": "-----BEGIN PUBLIC KEY-----\nMFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAE1Pymh59BGBrCGyNshANcJrP6LoGKit7f\n+c1oLI0r4qa7FK2auaMM8Tkj6BFauap7TGjI1CP8z9wANcAVnY1rDg==\n-----END PUBLIC KEY-----\n"
+    },
+    {
+        "name": "Bob",
+        "address": "ADDR_18d371c14da9072f07f569b122a16f9dbabfd822",
+        "balance": 800,
+        "nonce": 1,
+        "private_key": "-----BEGIN PRIVATE KEY-----\nMIGEAgEAMBAGByqGSM49AgEGBSuBBAAKBG0wawIBAQQga1IYX1LSuXVUI1WiBOnN\ndO6j68pgng3rbISYO5CRKXuhRANCAARi13FBT5Bd6QW+RT9oyaXzHUYsv5y9CKz0\nBz7VkVP3RAgr58VBO7MBqJMNCLV+3p+lQVz73AbMw2fTcsUWx6Og\n-----END PRIVATE KEY-----\n",
+        "public_key": "-----BEGIN PUBLIC KEY-----\nMFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEYtdxQU+QXekFvkU/aMml8x1GLL+cvQis\n9Ac+1ZFT90QIK+fFQTuzAaiTDQi1ft6fpUFc+9wGzMNn03LFFsejoA==\n-----END PUBLIC KEY-----\n"
+    },
+    {
+        "name": "Alice",
+        "address": "ADDR_30063868631fd20ceedb5b71942688f2f3035bf4",
+        "balance": 1250,
+        "nonce": 0,
+        "private_key": "-----BEGIN PRIVATE KEY-----\nMIGEAgEAMBAGByqGSM49AgEGBSuBBAAKBG0wawIBAQQgvHbQiqEPBnVKYV4bnlnt\nNrFO9tm8etB17YV/+oKKK8OhRANCAARdI876bdwatu4uVALt7og9gv/mjb8wKIwu\nR9ZSxRzyg+ZhlAI4Ypot1fHnSXSgiz6BWLdhWnnQYCLfCkAq/4Q5\n-----END PRIVATE KEY-----\n",
+        "public_key": "-----BEGIN PUBLIC KEY-----\nMFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEXSPO+m3cGrbuLlQC7e6IPYL/5o2/MCiM\nLkfWUsUc8oPmYZQCOGKaLdXx50l0oIs+gVi3YVp50GAi3wpAKv+EOQ==\n-----END PUBLIC KEY-----\n"
+    }
+]

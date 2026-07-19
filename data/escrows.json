@@ -1,0 +1,25 @@
+[
+    {
+        "escrow_id": "c58a1860-b20d-424c-9587-0c0d57abcdb9",
+        "buyer": "ADDR_5df0f3b4812a6048bc2e610b0ff295f0b2a25480",
+        "seller": "ADDR_18d371c14da9072f07f569b122a16f9dbabfd822",
+        "arbiter": "ADDR_30063868631fd20ceedb5b71942688f2f3035bf4",
+        "amount": 200,
+        "status": "REFUNDED",
+        "created_at": 1783478589,
+        "logs": [
+            {
+                "time": 1783478589,
+                "message": "Escrow created"
+            },
+            {
+                "time": 1783478589,
+                "message": "Funds locked"
+            },
+            {
+                "time": 1783479273,
+                "message": "200 coin refunded"
+            }
+        ]
+    }
+]

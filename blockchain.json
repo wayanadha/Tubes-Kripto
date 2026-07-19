@@ -1,0 +1,36 @@
+[
+    {
+        "index": 0,
+        "timestamp": 1783406738,
+        "transactions": [],
+        "previous_hash": "0",
+        "nonce": 0,
+        "hash": "e09a560f88d788d756558a3bccd67a74d9d46afd757cd1b95a3cfc3a3320ab3b"
+    },
+    {
+        "index": 1,
+        "timestamp": 1783406738,
+        "transactions": [
+            {
+                "tx_id": "5bab33c6-da04-4110-9108-4a05627dc0d4",
+                "type": "native_transfer",
+                "from": "ADDR_46739ac1d090b5917cd05061bc2a0e8122e7e6db",
+                "to": "ADDR_SELLER",
+                "amount": 100,
+                "nonce": 0,
+                "timestamp": 1783406738,
+                "public_key": "-----BEGIN PUBLIC KEY-----\nMFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAElLERymRDLg6nNphBpfwUWNt8jukHu83G\njHL9QTxholkhPpIOCT0Ugy5Jm6lONa9+sNRZKrn7vFMJ29aS/4pOtg==\n-----END PUBLIC KEY-----\n",
+                "signature": "304502204f3c36b5464c715fad65aab28514f42573b73c863300613307b4abbd299a91ee022100c77fd21b4dc5e5294f6b21832c09b93d54c6b45efec501a5123afccbfcbb918d"
+            },
+            {
+                "from": "SYSTEM",
+                "to": "ADDR_MINER",
+                "amount": 50,
+                "type": "mining_reward"
+            }
+        ],
+        "previous_hash": "e09a560f88d788d756558a3bccd67a74d9d46afd757cd1b95a3cfc3a3320ab3b",
+        "nonce": 2659,
+        "hash": "00057a3a4e3c2044a5178d3365cc46a44b58dab713ab6faf390857948ce0992f"
+    }
+]
